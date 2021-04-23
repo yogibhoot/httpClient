@@ -1,0 +1,19 @@
+<table class="table">
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">User Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Completed</th>
+        <th scope="col">Action</th>
+    </tr>
+    <tr *ngFor="let stu of User">
+        <th>{{stu.id}}</th>
+        <th>{{stu.userId}}</th>
+        <th>{{stu.title}}</th>
+        <th>{{stu.completed}}</th>
+        <th>
+            <span class="edit" routerLink="/userdetail/{{stu.id}}">Edit</span>
+            <!-- <span class="delete" (click)="deleteEmployee(stu.id)">Delete</span> -->
+        </th>
+    </tr>
+</table>
